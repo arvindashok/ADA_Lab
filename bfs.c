@@ -3,9 +3,9 @@
 
 int a[10][20], q[10], visited[10], n, i, j, f = 0, r = -1;
 
-void bfs(int v) {
+void bfs(int k) {
     for(i = 0; i < n; i++){
-        if(a[v][i] && visited[i]==0){
+        if(a[k][i] && visited[i]==0){
             q[++r] = i;
         }
     }
@@ -41,7 +41,7 @@ int main() {
         if(visited[i])
             printf("%d\t", i);
         else {
-            printf("\nBfs is not possible. Not all nodes are reachable");
+            printf("\nBfs is not possible. Not all nodes are reachable!\n");
             break;
         }
     }
