@@ -34,16 +34,13 @@ void dijkstra (int graph[n][n], int src, int dest){
                 dist[v] = dist[u]+graph[u][v];
         }
     }
-    // for (i=0; i<n; i++){
-    //     if (dist[i]==INT_MAX/2){
-    //         dist[i]=2;
-    //     }
-    // }
+    int d;
     printf ("Vertex  Distance\n");
     for (i=0; i<n; i++){
-        // if (i==dest)
-            printf ("%d \t %d\n", i, dist[i]);
+        if (i==dest) d=dist[i];
+        printf ("%d \t %d\n", i, dist[i]);
     }
+    printf ("\nNumber of transits from source to destination airport: %d\n", d);
 }
 
 int main(){
